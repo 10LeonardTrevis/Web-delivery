@@ -17,3 +17,10 @@ const { compilerOptions } = require('./tsconfig.json')
     settings
   }
 }
+    /* Handle image imports
+        https://jestjs.io/docs/webpack#handling-static-assets */
+    '^.+\\.(jpg|jpeg|png|gif|webp)$': '<rootDir>/__mocks__/fileMock.ts',
+
+    //Handle module aliases
+    '^@/components/(.*)$': '<rootDir>/components/$1'
+  },
